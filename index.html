@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raksha Promotions Kolar | Influencer Marketing</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -21,9 +26,9 @@
                             dark: '#AA8C2C',
                         },
                         dark: {
-                            DEFAULT: '#0a0a0a',
+                            DEFAULT: '#0f0f0f',
                             light: '#1a1a1a',
-                            lighter: '#2a2a2a',
+                            lighter: '#262626',
                         }
                     },
                     fontFamily: {
@@ -34,65 +39,67 @@
             }
         }
     </script>
+
+    <!-- Custom Styles for interactions -->
     <style>
-        .gold-gradient-text {
+        body {
+            background-color: #0f0f0f;
+            color: #e5e5e5;
+        }
+        .text-gradient {
             background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-gradient-bg {
+        .bg-gradient-gold {
             background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
         }
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
-            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5);
-            border-color: #D4AF37;
-            outline: none;
+        .hero-img-container::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, #D4AF37, transparent, #D4AF37);
+            border-radius: 1.5rem;
+            z-index: -1;
+            opacity: 0.5;
         }
-        .faq-answer {
+        .faq-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        .faq-answer.open {
-            max-height: 500px; /* Arbitrary large height for smooth transition */
-        }
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
-        .faq-icon.open {
-            transform: rotate(180deg);
-        }
     </style>
 </head>
-<body class="bg-dark text-gray-200 font-sans antialiased selection:bg-gold selection:text-black">
+<body class="font-sans antialiased selection:bg-gold selection:text-black">
 
-    <header class="fixed w-full z-50 bg-dark/95 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-dark/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <span class="font-serif text-2xl font-bold tracking-wider text-white uppercase">Raksha<span class="text-gold">Promotions</span></span>
-                </div>
+                <a href="#" class="flex-shrink-0 flex items-center gap-1">
+                    <span class="font-serif text-2xl font-bold tracking-wider text-white uppercase">RAKSHA<span class="text-gold">PROMOTIONS</span></span>
+                </a>
                 
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-sm font-medium hover:text-gold transition-colors">Services</a>
-                    <a href="#industries" class="text-sm font-medium hover:text-gold transition-colors">Industries</a>
-                    <a href="#faq" class="text-sm font-medium hover:text-gold transition-colors">FAQ</a>
+                    <a href="#services" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Services</a>
+                    <a href="#industries" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Industries</a>
+                    <a href="#faq" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">FAQ</a>
                     
                     <!-- Social Icons -->
-                    <div class="flex items-center space-x-4 border-l border-gray-700 pl-6">
-                        <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fa-brands fa-instagram text-xl"></i></a>
-                        <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fa-brands fa-threads text-xl"></i></a>
-                        <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fa-brands fa-youtube text-xl"></i></a>
+                    <div class="flex items-center space-x-5 border-l border-gray-700 pl-6">
+                        <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="text-gray-400 hover:text-gold transition transform hover:scale-110"><i class="fa-brands fa-instagram text-lg"></i></a>
+                        <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="text-gray-400 hover:text-gold transition transform hover:scale-110"><i class="fa-brands fa-youtube text-lg"></i></a>
+                        <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="text-gray-400 hover:text-gold transition transform hover:scale-110"><i class="fa-brands fa-threads text-lg"></i></a>
                     </div>
 
-                    <a href="#enquiry" class="text-sm font-medium gold-gradient-bg text-black px-6 py-2.5 rounded-full hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all transform hover:-translate-y-0.5">Enquire Now</a>
+                    <a href="#enquiry" class="text-sm font-semibold bg-gold text-black px-6 py-2.5 rounded-full hover:bg-gold-light transition-all shadow-[0_4px_14px_0_rgba(212,175,55,0.39)]">Enquire Now</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gold hover:text-white focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gold hover:text-white focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -100,239 +107,240 @@
         </div>
         
         <!-- Mobile Nav Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark-light border-b border-gold/20 absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-3 flex flex-col">
-                <a href="#services" class="block text-base font-medium hover:text-gold py-2">Services</a>
-                <a href="#industries" class="block text-base font-medium hover:text-gold py-2">Industries</a>
-                <a href="#faq" class="block text-base font-medium hover:text-gold py-2">FAQ</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-light border-b border-white/5 absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-4 flex flex-col">
+                <a href="#services" class="block text-base font-medium text-gray-300 hover:text-gold">Services</a>
+                <a href="#industries" class="block text-base font-medium text-gray-300 hover:text-gold">Industries</a>
+                <a href="#faq" class="block text-base font-medium text-gray-300 hover:text-gold">FAQ</a>
                 
-                <div class="flex items-center space-x-6 py-4">
-                    <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="text-gray-400 hover:text-gold"><i class="fa-brands fa-instagram text-2xl"></i></a>
-                    <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="text-gray-400 hover:text-gold"><i class="fa-brands fa-threads text-2xl"></i></a>
-                    <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="text-gray-400 hover:text-gold"><i class="fa-brands fa-youtube text-2xl"></i></a>
+                <div class="flex items-center space-x-6 py-2">
+                    <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="text-gray-400 hover:text-gold"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="text-gray-400 hover:text-gold"><i class="fa-brands fa-youtube text-xl"></i></a>
+                    <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="text-gray-400 hover:text-gold"><i class="fa-brands fa-threads text-xl"></i></a>
                 </div>
 
-                <a href="#enquiry" class="block text-center text-base font-medium gold-gradient-bg text-black px-4 py-3 rounded-md w-full">Enquire Now</a>
+                <a href="#enquiry" class="block text-center text-base font-semibold bg-gold text-black px-4 py-3 rounded-md w-full">Enquire Now</a>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow pt-20">
-        <section id="hero" class="relative py-24 md:py-32 lg:py-48 overflow-hidden flex items-center min-h-[85vh]">
-            <!-- Decorative Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gold/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="relative py-16 md:py-24 lg:py-32 overflow-hidden flex items-center min-h-[90vh]">
+            <!-- Background Glows -->
+            <div class="absolute top-1/4 left-0 w-[500px] h-[500px] bg-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gold/10 blur-[100px] rounded-full pointer-events-none"></div>
             
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <p class="text-gold font-medium tracking-[0.3em] uppercase text-sm mb-6">Kolar's Premier Influencer</p>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight text-white">
-                    Amplify Your Brand With <br/>
-                    <span class="gold-gradient-text">Raksha Promotions</span>
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
-                    Connect with thousands of local customers through highly engaging Reels, Shorts, and authentic promotional content tailored for your business.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#enquiry" class="gold-gradient-bg text-black font-semibold py-4 px-8 rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all transform hover:-translate-y-1 flex items-center justify-center">
-                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Message on WhatsApp
-                    </a>
-                    <a href="#services" class="border border-gold/50 text-white font-medium py-4 px-8 rounded-full hover:bg-gold/10 hover:border-gold transition-all text-center">
-                        Explore Services
-                    </a>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Text Content -->
+                    <div class="text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0">
+                        <p class="text-gold font-semibold tracking-[0.2em] uppercase text-xs md:text-sm mb-4">Kolar's Premier Influencer</p>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight text-white">
+                            Amplify Your Brand With <br/>
+                            <span class="text-gradient">Raksha Promotions</span>
+                        </h1>
+                        <p class="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed mb-10">
+                            Connect with thousands of local customers through highly engaging Reels, Shorts, and authentic promotional content tailored for your business.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                            <a href="https://wa.me/918660647295" target="_blank" class="bg-gold text-black font-semibold py-3.5 px-8 rounded-full hover:bg-gold-light transition-all flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                                <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Message on WhatsApp
+                            </a>
+                            <a href="#services" class="border border-white/20 text-white font-medium py-3.5 px-8 rounded-full hover:bg-white/5 hover:border-gold transition-all text-center">
+                                Explore Services
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image Content -->
+                    <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                        <div class="hero-img-container relative w-full max-w-md lg:max-w-lg aspect-[4/5] rounded-3xl z-10">
+                            <!-- High quality Unsplash placeholder for an influencer -->
+                            <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=1974&auto=format&fit=crop" alt="Raksha Promotions Influencer" class="w-full h-full object-cover rounded-3xl shadow-2xl relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-500">
+                            <!-- Overlay to blend slightly with dark theme -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent rounded-3xl z-20"></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section id="services" class="py-24 bg-dark-lighter border-t border-gold/10">
+        <!-- Promotional Channels -->
+        <section id="services" class="py-24 bg-dark-light relative border-t border-white/5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Promotional Channels</h2>
-                    <div class="w-24 h-1 bg-gold mx-auto rounded-full"></div>
-                    <p class="mt-6 text-gray-400 max-w-2xl mx-auto">We leverage the most powerful social platforms to ensure your brand gets maximum visibility and footfall.</p>
+                    <div class="w-16 h-1 bg-gold mx-auto rounded-full mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto">We leverage the most powerful social platforms to ensure your brand gets maximum visibility and footfall.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Instagram -->
-                    <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-gold/50 transition-colors group">
-                        <div class="w-14 h-14 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                    <!-- Instagram Card (Clickable) -->
+                    <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="group bg-dark p-8 rounded-2xl border border-white/5 hover:border-gold/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(212,175,55,0.1)] flex flex-col h-full">
+                        <div class="w-14 h-14 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                             <i class="fa-brands fa-instagram text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Instagram Reels</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Viral short-form videos, store walkthroughs, and product highlights pushed to a massive local audience via Reels and Stories.</p>
-                    </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">Instagram Reels</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Viral short-form videos, store walkthroughs, and product highlights pushed to a massive local audience.</p>
+                        <div class="text-gold text-sm font-semibold flex items-center gap-2 mt-auto">
+                            Visit Profile <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </a>
 
-                    <!-- Facebook -->
-                    <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition-colors group">
-                        <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                    <!-- Facebook Card -->
+                    <a href="#" class="group bg-dark p-8 rounded-2xl border border-white/5 hover:border-[#1877F2]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(24,119,242,0.1)] flex flex-col h-full">
+                        <div class="w-14 h-14 bg-[#1877F2] rounded-xl flex items-center justify-center mb-6 shadow-lg">
                             <i class="fa-brands fa-facebook-f text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Facebook Marketing</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Engaging community posts, cross-platform video sharing, and targeted brand tagging to reach diverse age demographics.</p>
-                    </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#1877F2] transition-colors">Facebook Marketing</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Engaging community posts, cross-platform video sharing, and targeted brand tagging.</p>
+                        <div class="text-[#1877F2] text-sm font-semibold flex items-center gap-2 mt-auto">
+                            Coming Soon <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </a>
 
-                    <!-- Threads -->
-                    <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-gray-400/50 transition-colors group">
-                        <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6">
+                    <!-- Threads Card (Clickable) -->
+                    <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="group bg-dark p-8 rounded-2xl border border-white/5 hover:border-white/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] flex flex-col h-full">
+                        <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 shadow-lg">
                             <i class="fa-brands fa-threads text-black text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Threads Engagement</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Text-driven conversations, authentic brand recommendations, and community interaction to build trust and brand recall.</p>
-                    </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">Threads Engagement</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Text-driven conversations, authentic brand recommendations, and active community interaction.</p>
+                        <div class="text-white text-sm font-semibold flex items-center gap-2 mt-auto">
+                            Visit Profile <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </a>
 
-                    <!-- YouTube -->
-                    <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-red-500/50 transition-colors group">
-                        <div class="w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center mb-6">
+                    <!-- YouTube Card (Clickable) -->
+                    <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="group bg-dark p-8 rounded-2xl border border-white/5 hover:border-[#FF0000]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,0,0,0.1)] flex flex-col h-full">
+                        <div class="w-14 h-14 bg-[#FF0000] rounded-xl flex items-center justify-center mb-6 shadow-lg">
                             <i class="fa-brands fa-youtube text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3">YouTube Shorts</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">High-retention vertical videos capitalizing on the YouTube algorithm, along with potential dedicated vlog segments.</p>
-                    </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#FF0000] transition-colors">YouTube Shorts</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">High-retention vertical videos capitalizing on the YouTube algorithm and potential vlog segments.</p>
+                        <div class="text-[#FF0000] text-sm font-semibold flex items-center gap-2 mt-auto">
+                            Visit Profile <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="industries" class="py-24 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                    <div class="max-w-2xl">
-                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Industries We Elevate</h2>
-                        <div class="w-24 h-1 bg-gold rounded-full mb-6 md:mb-0"></div>
-                        <p class="mt-6 text-gray-400">Our promotional strategies are proven to generate leads, walk-ins, and brand awareness for a variety of local business sectors.</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-                    <div class="bg-dark-light border border-gray-800 rounded-xl p-6 text-center hover:bg-gold/5 transition-colors">
+        <!-- Industries Section -->
+        <section id="industries" class="py-24 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Industries We Elevate</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mb-12"></div>
+                
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+                    <div class="flex flex-col items-center justify-center p-6 bg-dark-light border border-white/5 rounded-2xl w-40 hover:border-gold/30 transition-colors">
                         <i class="fa-solid fa-house-medical text-3xl text-gold mb-4"></i>
-                        <h4 class="text-white font-semibold">Hospitals & Clinics</h4>
+                        <h4 class="text-white font-medium text-sm">Hospitals & Clinics</h4>
                     </div>
-                    <div class="bg-dark-light border border-gray-800 rounded-xl p-6 text-center hover:bg-gold/5 transition-colors">
+                    <div class="flex flex-col items-center justify-center p-6 bg-dark-light border border-white/5 rounded-2xl w-40 hover:border-gold/30 transition-colors">
                         <i class="fa-solid fa-shirt text-3xl text-gold mb-4"></i>
-                        <h4 class="text-white font-semibold">Cloth Centers</h4>
+                        <h4 class="text-white font-medium text-sm">Cloth Centers</h4>
                     </div>
-                    <div class="bg-dark-light border border-gray-800 rounded-xl p-6 text-center hover:bg-gold/5 transition-colors">
+                    <div class="flex flex-col items-center justify-center p-6 bg-dark-light border border-white/5 rounded-2xl w-40 hover:border-gold/30 transition-colors">
                         <i class="fa-solid fa-scissors text-3xl text-gold mb-4"></i>
-                        <h4 class="text-white font-semibold">Salons & Spas</h4>
+                        <h4 class="text-white font-medium text-sm">Salons & Spas</h4>
                     </div>
-                    <div class="bg-dark-light border border-gray-800 rounded-xl p-6 text-center hover:bg-gold/5 transition-colors">
-                        <i class="fa-solid fa-utensils text-3xl text-gold mb-4"></i>
-                        <h4 class="text-white font-semibold">Restaurants</h4>
-                    </div>
-                    <div class="bg-dark-light border border-gray-800 rounded-xl p-6 text-center hover:bg-gold/5 transition-colors">
+                    <div class="flex flex-col items-center justify-center p-6 bg-dark-light border border-white/5 rounded-2xl w-40 hover:border-gold/30 transition-colors">
                         <i class="fa-solid fa-building text-3xl text-gold mb-4"></i>
-                        <h4 class="text-white font-semibold">Real Estate</h4>
+                        <h4 class="text-white font-medium text-sm">Real Estate</h4>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-6 bg-dark-light border border-white/5 rounded-2xl w-40 hover:border-gold/30 transition-colors">
+                        <i class="fa-solid fa-graduation-cap text-3xl text-gold mb-4"></i>
+                        <h4 class="text-white font-medium text-sm">Educational Inst.</h4>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="enquiry" class="py-24 bg-dark-lighter border-t border-gold/10">
+        <!-- Enquiry / Form Section -->
+        <section id="enquiry" class="py-24 bg-dark-light relative border-t border-white/5">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-dark border border-gold/20 rounded-3xl p-8 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+                <div class="bg-dark border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-gold"></div>
+                    
                     <div class="text-center mb-10">
-                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-3">Start Your Promotion</h2>
-                        <p class="text-gray-400">Fill out your business details, and we will connect with you via WhatsApp instantly to discuss the collaboration.</p>
+                        <h2 class="text-3xl font-serif font-bold text-white mb-3">Start Your Campaign</h2>
+                        <p class="text-gray-400 text-sm">Fill out your details, and we'll connect via WhatsApp instantly.</p>
                     </div>
 
-                    <form id="whatsapp-form" onsubmit="sendToWhatsApp(event)" class="space-y-6">
+                    <form id="enquiry-form" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Name -->
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name *</label>
-                                <input type="text" id="name" required class="form-input w-full bg-dark-light border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500" placeholder="John Doe">
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Your Name *</label>
+                                <input type="text" id="name" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="John Doe">
                             </div>
-                            
-                            <!-- Business Name -->
                             <div>
-                                <label for="business" class="block text-sm font-medium text-gray-300 mb-2">Business Name *</label>
-                                <input type="text" id="business" required class="form-input w-full bg-dark-light border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500" placeholder="Kolar Supermart">
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Business Name *</label>
+                                <input type="text" id="business" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="E.g., Kolar Supermart">
                             </div>
-
-                            <!-- Phone -->
                             <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number *</label>
-                                <input type="tel" id="phone" required class="form-input w-full bg-dark-light border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500" placeholder="+91 98765 43210">
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="+91 98765 43210">
                             </div>
-
-                            <!-- Industry -->
                             <div>
-                                <label for="industry" class="block text-sm font-medium text-gray-300 mb-2">Industry *</label>
-                                <select id="industry" required class="form-select w-full bg-dark-light border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-gold">
-                                    <option value="" disabled selected>Select an industry</option>
-                                    <option value="Hospital/Clinic">Hospital / Clinic</option>
-                                    <option value="Cloth Center/Fashion">Cloth Center / Fashion</option>
-                                    <option value="Salon/Beauty">Salon / Beauty</option>
-                                    <option value="Restaurant/Cafe">Restaurant / Cafe</option>
-                                    <option value="Real Estate">Real Estate</option>
-                                    <option value="Other">Other</option>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Platform of Interest *</label>
+                                <select id="platform" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-4 py-3 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all appearance-none">
+                                    <option value="" disabled selected>Select platform</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="YouTube">YouTube</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Multiple">Multiple Platforms</option>
                                 </select>
                             </div>
                         </div>
-
-                        <!-- Message -->
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Campaign Details / Message</label>
-                            <textarea id="message" rows="4" class="form-textarea w-full bg-dark-light border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500" placeholder="Tell us about what you want to promote..."></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold text-lg py-4 px-8 rounded-xl transition-colors duration-300 flex items-center justify-center gap-3">
-                            <i class="fa-brands fa-whatsapp text-2xl"></i>
-                            Send Enquiry via WhatsApp
+                        <button type="submit" class="w-full bg-gold hover:bg-gold-light text-black font-bold py-4 rounded-xl transition-colors shadow-lg flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Send Enquiry
                         </button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="py-24 relative">
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-dark">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Frequently Asked Questions</h2>
-                    <div class="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+                    <h2 class="text-3xl font-serif font-bold text-white mb-4">Frequently Asked Questions</h2>
+                    <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
                 </div>
 
                 <div class="space-y-4">
-                    <!-- FAQ 1 -->
-                    <div class="bg-dark-light border border-gray-800 rounded-xl overflow-hidden">
-                        <button class="faq-btn w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                            <span class="font-medium text-white text-lg">Do I need to provide the video script?</span>
-                            <i class="fa-solid fa-chevron-down text-gold faq-icon"></i>
+                    <div class="border border-white/10 rounded-xl bg-dark-light">
+                        <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                            <span class="font-medium text-white">Do I need to provide the video script?</span>
+                            <i class="fa-solid fa-plus text-gold transform transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-0">
-                            <p class="text-gray-400 pb-5">No, you don't have to! We handle the conceptualization and scripting to ensure the content matches social media trends while highlighting your brand effectively.</p>
+                        <div class="faq-content px-6 pb-0">
+                            <p class="text-gray-400 pb-5 text-sm">No, you don't! We handle conceptualization and scripting to ensure the content matches trends and highlights your brand.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-white/10 rounded-xl bg-dark-light">
+                        <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                            <span class="font-medium text-white">How long does it take to post?</span>
+                            <i class="fa-solid fa-plus text-gold transform transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-0">
+                            <p class="text-gray-400 pb-5 text-sm">Once the shoot is done, it typically takes 2-4 business days for editing and final posting across platforms.</p>
                         </div>
                     </div>
 
-                    <!-- FAQ 2 -->
-                    <div class="bg-dark-light border border-gray-800 rounded-xl overflow-hidden">
-                        <button class="faq-btn w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                            <span class="font-medium text-white text-lg">How long does it take to post a Reel?</span>
-                            <i class="fa-solid fa-chevron-down text-gold faq-icon"></i>
+                    <div class="border border-white/10 rounded-xl bg-dark-light">
+                        <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                            <span class="font-medium text-white">Do you shoot outside of Kolar?</span>
+                            <i class="fa-solid fa-plus text-gold transform transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-0">
-                            <p class="text-gray-400 pb-5">Once the shoot is completed at your location, it typically takes 2-4 business days for editing, review, and final posting across our platforms.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="bg-dark-light border border-gray-800 rounded-xl overflow-hidden">
-                        <button class="faq-btn w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                            <span class="font-medium text-white text-lg">Do you travel outside of Kolar?</span>
-                            <i class="fa-solid fa-chevron-down text-gold faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6 pb-0">
-                            <p class="text-gray-400 pb-5">Yes, while our primary base is Kolar, we are available for promotional shoots across Karnataka. Travel and accommodation fees may apply depending on the distance.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="bg-dark-light border border-gray-800 rounded-xl overflow-hidden">
-                        <button class="faq-btn w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-                            <span class="font-medium text-white text-lg">Are there package deals for multiple videos?</span>
-                            <i class="fa-solid fa-chevron-down text-gold faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6 pb-0">
-                            <p class="text-gray-400 pb-5">Absolutely. We offer customized monthly retainers and bundle packages if you are looking for long-term brand building and consistent promotions.</p>
+                        <div class="faq-content px-6 pb-0">
+                            <p class="text-gray-400 pb-5 text-sm">Yes, we are available across Karnataka. Travel fees may apply depending on the distance from Kolar.</p>
                         </div>
                     </div>
                 </div>
@@ -340,127 +348,91 @@
         </section>
     </main>
 
-    <footer class="bg-dark border-t border-gray-800 pt-16 pb-8">
+    <!-- Footer -->
+    <footer class="bg-dark-light border-t border-white/10 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                
-                <!-- Brand -->
+                <!-- Brand Info -->
                 <div>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-white uppercase block mb-4">Raksha<span class="text-gold">Promotions</span></span>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Your trusted local influencer in Kolar, Karnataka. Elevating brands through powerful, organic digital reach.
-                    </p>
+                    <span class="font-serif text-2xl font-bold tracking-wider text-white uppercase block mb-4">RAKSHA<span class="text-gold">PROMOTIONS</span></span>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Elevating local businesses in Kolar through high-impact, authentic social media promotions.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="w-10 h-10 rounded-full bg-dark-light flex items-center justify-center text-gray-400 hover:text-white hover:bg-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="w-10 h-10 rounded-full bg-dark-light flex items-center justify-center text-gray-400 hover:text-white hover:bg-gold transition-colors"><i class="fa-brands fa-threads"></i></a>
-                        <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="w-10 h-10 rounded-full bg-dark-light flex items-center justify-center text-gray-400 hover:text-white hover:bg-gold transition-colors"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://wa.me/918660647295" target="_blank" class="w-10 h-10 rounded-full bg-dark-light flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#25D366] transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fa-brands fa-youtube text-xl"></i></a>
+                        <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="text-gray-400 hover:text-gold transition"><i class="fa-brands fa-threads text-xl"></i></a>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><a href="#hero" class="hover:text-gold transition-colors">Home</a></li>
-                        <li><a href="#services" class="hover:text-gold transition-colors">Services</a></li>
-                        <li><a href="#industries" class="hover:text-gold transition-colors">Industries</a></li>
-                        <li><a href="#faq" class="hover:text-gold transition-colors">FAQs</a></li>
-                        <li><a href="#enquiry" class="hover:text-gold transition-colors">Contact Us</a></li>
+                    <h4 class="text-white font-semibold mb-4 text-sm tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#services" class="hover:text-gold transition">Services</a></li>
+                        <li><a href="#industries" class="hover:text-gold transition">Industries</a></li>
+                        <li><a href="#faq" class="hover:text-gold transition">FAQ</a></li>
+                        <li><a href="#enquiry" class="hover:text-gold transition">Enquire Now</a></li>
                     </ul>
                 </div>
 
                 <!-- Legal -->
                 <div>
-                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><a href="#" class="hover:text-gold transition-colors">Terms and Conditions</a></li>
-                        <li><a href="#" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+                    <h4 class="text-white font-semibold mb-4 text-sm tracking-wider">Legal & Contact</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm mb-6">
+                        <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gold transition">Terms and Conditions</a></li>
                     </ul>
-                    <div class="mt-6">
-                        <p class="text-sm text-gray-500">
-                            <i class="fa-solid fa-phone text-gold mr-2"></i> +91 8660647295
-                        </p>
-                    </div>
+                    <a href="https://wa.me/918660647295" target="_blank" class="inline-flex items-center text-gold text-sm font-medium hover:text-white transition">
+                        <i class="fa-brands fa-whatsapp mr-2"></i> +91 8660647295
+                    </a>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-500 text-sm">&copy; 2026 Raksha Promotions Kolar. All rights reserved.</p>
-                <p class="text-gray-600 text-sm mt-2 md:mt-0">Designed for Influencer Growth</p>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-xs">
+                &copy; 2026 Raksha Promotions Kolar. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <!-- Interactive Scripts -->
     <script>
-        // Mobile Menu Toggle
+        // Mobile menu toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu on link click
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        
+        // Hide mobile menu on link click
         menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => menu.classList.add('hidden'));
         });
 
-        // FAQ Toggle Logic
-        function toggleFaq(button) {
-            const answer = button.nextElementSibling;
-            const icon = button.querySelector('.faq-icon');
-            
-            // Close all other FAQs
-            document.querySelectorAll('.faq-answer').forEach(el => {
-                if(el !== answer) el.classList.remove('open');
-            });
-            document.querySelectorAll('.faq-icon').forEach(el => {
-                if(el !== icon) el.classList.remove('open');
-            });
+        // FAQ accordion logic
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            const isOpen = content.style.maxHeight;
 
-            // Toggle current FAQ
-            answer.classList.toggle('open');
-            icon.classList.toggle('open');
-        }
+            // Close all
+            document.querySelectorAll('.faq-content').forEach(el => el.style.maxHeight = null);
+            document.querySelectorAll('#faq .fa-plus').forEach(el => el.style.transform = 'rotate(0deg)');
 
-        // WhatsApp Form Submission Handler
-        function sendToWhatsApp(event) {
-            event.preventDefault(); // Prevent standard form submission
-
-            // Capture data
-            const name = document.getElementById('name').value.trim();
-            const business = document.getElementById('business').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const industry = document.getElementById('industry').value;
-            const message = document.getElementById('message').value.trim();
-
-            // Construct the message
-            let whatsappText = `Hello Raksha Promotions,\n\nI would like to inquire about a collaboration.\n\n`;
-            whatsappText += `*Name:* ${name}\n`;
-            whatsappText += `*Business:* ${business}\n`;
-            whatsappText += `*Contact:* ${phone}\n`;
-            whatsappText += `*Industry:* ${industry}\n\n`;
-            
-            if (message) {
-                whatsappText += `*Message:* ${message}`;
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(45deg)';
             }
-
-            // Encode for URL
-            const encodedText = encodeURIComponent(whatsappText);
-            
-            // Raksha's specific WhatsApp Number (with country code)
-            const whatsappNumber = "918660647295";
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-
-            // Open in new tab
-            window.open(whatsappURL, '_blank');
-            
-            // Optional: reset form after sending
-            document.getElementById('whatsapp-form').reset();
         }
+
+        // Handle WhatsApp Enquiry form
+        document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const business = document.getElementById('business').value;
+            const phone = document.getElementById('phone').value;
+            const platform = document.getElementById('platform').value;
+
+            const text = `Hi Raksha Promotions!%0A%0AI'm interested in a promotion.%0A*Name:* ${name}%0A*Business:* ${business}%0A*Phone:* ${phone}%0A*Platform Interest:* ${platform}`;
+            window.open(`https://wa.me/918660647295?text=${text}`, '_blank');
+        });
     </script>
 </body>
 </html>
