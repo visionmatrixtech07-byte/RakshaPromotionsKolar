@@ -9,10 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Icons (FontAwesome 6+) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,12 +23,11 @@
                             dark: '#AA8C2C',
                         },
                         dark: {
-                            DEFAULT: '#0f0f0f',
+                            DEFAULT: '#0F0F0F',
                             light: '#1a1a1a',
                             lighter: '#262626',
                         },
                         brand: {
-                            ig: '#E1306C',
                             yt: '#FF0000',
                             wa: '#25D366',
                             fb: '#1877F2'
@@ -45,10 +42,9 @@
         }
     </script>
 
-    <!-- Custom Styles for interactions -->
     <style>
         body {
-            background-color: #0f0f0f;
+            background-color: #0F0F0F;
             color: #e5e5e5;
             -webkit-font-smoothing: antialiased;
         }
@@ -58,21 +54,9 @@
             -webkit-text-fill-color: transparent;
         }
         .ig-gradient-text {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        .bg-gradient-gold {
-            background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
-        }
-        .hero-img-container::after {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: linear-gradient(135deg, #D4AF37, transparent, #D4AF37);
-            border-radius: 1.5rem;
-            z-index: -1;
-            opacity: 0.5;
         }
         .faq-content {
             max-height: 0;
@@ -83,8 +67,7 @@
 </head>
 <body class="font-sans antialiased selection:bg-gold selection:text-black">
 
-    <!-- Header -->
-    <header class="fixed w-full z-50 bg-dark/95 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+    <header class="fixed w-full z-50 bg-dark/95 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -101,20 +84,20 @@
                     <!-- Social Icons (Colored) -->
                     <div class="flex items-center space-x-4 lg:space-x-5 border-l border-gray-700 pl-4 lg:pl-6">
                         <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="transition transform hover:scale-110" title="Instagram">
-                            <i class="fa-brands fa-instagram text-lg ig-gradient-text"></i>
+                            <i class="fa-brands fa-instagram text-xl ig-gradient-text"></i>
                         </a>
-                        <a href="https://www.threads.com/@rakshavlogs_kolar" target="_blank" class="transition transform hover:scale-110 text-white" title="Threads">
-                            <i class="fa-brands fa-threads text-lg"></i>
+                        <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="transition transform hover:scale-110 text-white" title="Threads">
+                            <i class="fa-brands fa-threads text-xl"></i>
                         </a>
-                        <a href="https://youtube.com/@rakshaka07" target="_blank" class="transition transform hover:scale-110 text-brand-yt" title="YouTube">
-                            <i class="fa-brands fa-youtube text-lg"></i>
+                        <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="transition transform hover:scale-110 text-brand-yt" title="YouTube">
+                            <i class="fa-brands fa-youtube text-xl"></i>
                         </a>
                         <a href="https://wa.me/918660647295" target="_blank" class="transition transform hover:scale-110 text-brand-wa" title="WhatsApp">
-                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
                         </a>
                     </div>
 
-                    <a href="#enquiry" class="text-sm font-semibold bg-gold text-black px-5 py-2 lg:px-6 lg:py-2.5 rounded-full hover:bg-gold-light transition-all shadow-[0_4px_14px_0_rgba(212,175,55,0.39)]">Enquire Now</a>
+                    <a href="#enquiry" class="text-sm font-semibold bg-gold text-black px-6 py-2.5 rounded-full hover:bg-gold-light transition-all shadow-[0_4px_14px_0_rgba(212,175,55,0.3)]">Enquire Now</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -126,63 +109,57 @@
             </div>
         </div>
         
-        <!-- Mobile Nav Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark-light border-b border-white/5 absolute w-full left-0 shadow-xl">
-            <div class="px-4 pt-2 pb-6 space-y-4 flex flex-col">
+        <!-- Mobile Nav Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-light border-b border-white/10 absolute w-full left-0 shadow-2xl">
+            <div class="px-4 pt-2 pb-6 flex flex-col space-y-4">
                 <a href="#services" class="block text-base font-medium text-gray-300 hover:text-gold px-2 py-1">Services</a>
                 <a href="#industries" class="block text-base font-medium text-gray-300 hover:text-gold px-2 py-1">Industries</a>
                 <a href="#faq" class="block text-base font-medium text-gray-300 hover:text-gold px-2 py-1">FAQ</a>
                 
                 <div class="flex items-center justify-around py-4 border-t border-white/10 mt-2">
                     <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank"><i class="fa-brands fa-instagram text-2xl ig-gradient-text"></i></a>
-                    <a href="https://www.threads.com/@rakshavlogs_kolar" target="_blank" class="text-white"><i class="fa-brands fa-threads text-2xl"></i></a>
-                    <a href="https://youtube.com/@rakshaka07" target="_blank" class="text-brand-yt"><i class="fa-brands fa-youtube text-2xl"></i></a>
+                    <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="text-white"><i class="fa-brands fa-threads text-2xl"></i></a>
+                    <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="text-brand-yt"><i class="fa-brands fa-youtube text-2xl"></i></a>
                     <a href="https://wa.me/918660647295" target="_blank" class="text-brand-wa"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
                 </div>
 
-                <a href="#enquiry" class="block text-center text-base font-semibold bg-gold text-black px-4 py-3 rounded-md w-full mt-2 shadow-md">Enquire Now</a>
+                <a href="#enquiry" class="block text-center text-base font-semibold bg-gold text-black px-4 py-3 rounded-full w-full mt-2 shadow-md">Enquire Now</a>
             </div>
         </div>
     </header>
 
     <main class="pt-20">
-        <!-- Hero Section -->
-        <section id="hero" class="relative py-12 md:py-20 lg:py-32 overflow-hidden flex items-center min-h-[auto] lg:min-h-[90vh]">
-            <!-- Decorative Glow -->
-            <div class="absolute top-1/4 left-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gold/5 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-0 right-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-gold/10 blur-[80px] md:blur-[100px] rounded-full pointer-events-none"></div>
-            
+        <section id="hero" class="relative py-12 md:py-24 lg:py-32 overflow-hidden flex items-center min-h-[auto] md:min-h-[85vh]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-                <!-- Stacked on mobile, 2 cols on desktop -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
+                <!-- Mobile: flex-col, Desktop: flex-row -->
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-12">
                     
-                    <!-- Text Content -->
-                    <div class="text-center lg:text-left order-2 lg:order-1 mt-4 lg:mt-0">
-                        <p class="text-gold font-semibold tracking-[0.15em] md:tracking-[0.2em] uppercase text-xs md:text-sm mb-3 md:mb-4">Kolar's Premier Influencer</p>
-                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 md:mb-6 leading-tight text-white">
+                    <!-- Left: Text Content -->
+                    <div class="w-full md:w-1/2 text-center md:text-left order-2 md:order-1 mt-6 md:mt-0">
+                        <p class="text-gold font-semibold tracking-[0.2em] uppercase text-xs md:text-sm mb-4">Kolar's Premier Influencer</p>
+                        <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight text-white">
                             Amplify Your Brand With <br class="hidden sm:block"/>
                             <span class="text-gradient">Raksha Promotions</span>
                         </h1>
-                        <p class="text-sm sm:text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed mb-8 md:mb-10 px-2 lg:px-0">
+                        <p class="text-base md:text-lg text-gray-400 max-w-xl mx-auto md:mx-0 font-light leading-relaxed mb-8 md:mb-10">
                             Connect with thousands of local customers through highly engaging Reels, Shorts, and authentic promotional content tailored for your business.
                         </p>
                         
-                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                            <a href="https://wa.me/918660647295" target="_blank" class="bg-gold text-black font-semibold py-3 sm:py-3.5 px-6 sm:px-8 rounded-full hover:bg-gold-light transition-all flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)] w-full sm:w-auto text-sm sm:text-base">
+                        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                            <a href="https://wa.me/918660647295" target="_blank" class="bg-gold text-black font-semibold py-3.5 px-8 rounded-full hover:bg-gold-light transition-all flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)] w-full sm:w-auto">
                                 <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Message on WhatsApp
                             </a>
-                            <a href="#services" class="border border-white/20 text-white font-medium py-3 sm:py-3.5 px-6 sm:px-8 rounded-full hover:bg-white/5 hover:border-gold transition-all text-center w-full sm:w-auto text-sm sm:text-base">
+                            <a href="#services" class="border border-white/20 text-white font-medium py-3.5 px-8 rounded-full hover:bg-white/5 hover:border-gold transition-all text-center w-full sm:w-auto">
                                 Explore Services
                             </a>
                         </div>
                     </div>
 
-                    <!-- Image Content -->
-                    <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative px-4 sm:px-8 lg:px-0">
-                        <div class="hero-img-container relative w-full max-w-[320px] sm:max-w-md lg:max-w-lg aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-2xl sm:rounded-3xl z-10">
-                            <!-- High quality promotional banner image -->
-                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Raksha Promotions Banner" class="w-full h-full object-cover rounded-2xl sm:rounded-3xl shadow-2xl relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent rounded-2xl sm:rounded-3xl z-20"></div>
+                    <!-- Right: Image Content -->
+                    <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
+                        <div class="relative w-full max-w-[340px] md:max-w-md lg:max-w-lg aspect-square md:aspect-[4/5] rounded-3xl z-10 p-1 bg-gradient-to-tr from-gold via-dark to-gold">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Promotional Banner" class="w-full h-full object-cover rounded-[1.4rem] shadow-2xl relative z-10">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent rounded-3xl z-20"></div>
                         </div>
                     </div>
 
@@ -190,60 +167,59 @@
             </div>
         </section>
 
-        <!-- Promotional Channels -->
         <section id="services" class="py-16 md:py-24 bg-dark-light relative border-t border-white/5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10 md:mb-16">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-3 md:mb-4">Promotional Channels</h2>
-                    <div class="w-12 md:w-16 h-1 bg-gold mx-auto rounded-full mb-4 md:mb-6"></div>
-                    <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto px-2">We leverage the most powerful social platforms to ensure your brand gets maximum visibility and footfall.</p>
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Promotional Channels</h2>
+                    <div class="w-16 h-1 bg-gold mx-auto rounded-full mb-6"></div>
+                    <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">We leverage the most powerful social platforms to ensure your brand gets maximum visibility and footfall.</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Instagram Card -->
-                    <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="group bg-dark p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-ig/50 transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(225,48,108,0.1)] flex flex-col h-full">
-                        <div class="mb-4 md:mb-6">
-                            <i class="fa-brands fa-instagram text-3xl md:text-4xl ig-gradient-text transition-transform group-hover:scale-110"></i>
+                    <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="group bg-dark p-8 rounded-2xl border border-white/10 hover:border-[#E1306C]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(225,48,108,0.15)] flex flex-col h-full">
+                        <div class="mb-6">
+                            <i class="fa-brands fa-instagram text-4xl ig-gradient-text transition-transform group-hover:scale-110"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-brand-ig transition-colors">Instagram Reels</h3>
-                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow">Viral short-form videos, store walkthroughs, and product highlights pushed to a massive local audience.</p>
-                        <div class="text-brand-ig text-xs md:text-sm font-semibold flex items-center gap-2 mt-auto">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#E1306C] transition-colors">Instagram Reels</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Viral short-form videos, store walkthroughs, and product highlights pushed to a massive local audience.</p>
+                        <div class="text-[#E1306C] text-sm font-semibold flex items-center gap-2 mt-auto">
                             Visit Profile <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                         </div>
                     </a>
 
                     <!-- Facebook Card -->
-                    <a href="#" class="group bg-dark p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-fb/50 transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(24,119,242,0.1)] flex flex-col h-full cursor-default">
-                        <div class="mb-4 md:mb-6">
-                            <i class="fa-brands fa-facebook text-3xl md:text-4xl text-brand-fb transition-transform group-hover:scale-110"></i>
+                    <div class="group bg-dark p-8 rounded-2xl border border-white/10 hover:border-brand-fb/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(24,119,242,0.15)] flex flex-col h-full cursor-default">
+                        <div class="mb-6">
+                            <i class="fa-brands fa-facebook text-4xl text-brand-fb transition-transform group-hover:scale-110"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-brand-fb transition-colors">Facebook Marketing</h3>
-                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow">Engaging community posts, cross-platform video sharing, and targeted brand tagging.</p>
-                        <div class="text-brand-fb text-xs md:text-sm font-semibold flex items-center gap-2 mt-auto">
-                            Coming Soon <i class="fa-solid fa-clock text-xs"></i>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-fb transition-colors">Facebook Marketing</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Engaging community posts, cross-platform video sharing, and targeted brand tagging.</p>
+                        <div class="text-brand-fb text-sm font-semibold flex items-center gap-2 mt-auto">
+                            Active Service <i class="fa-solid fa-check text-xs"></i>
                         </div>
-                    </a>
+                    </div>
 
                     <!-- Threads Card -->
-                    <a href="https://www.threads.com/@rakshavlogs_kolar" target="_blank" class="group bg-dark p-6 md:p-8 rounded-2xl border border-white/5 hover:border-white/30 transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] flex flex-col h-full">
-                        <div class="mb-4 md:mb-6">
-                            <i class="fa-brands fa-threads text-3xl md:text-4xl text-white transition-transform group-hover:scale-110"></i>
+                    <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="group bg-dark p-8 rounded-2xl border border-white/10 hover:border-white/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] flex flex-col h-full">
+                        <div class="mb-6">
+                            <i class="fa-brands fa-threads text-4xl text-white transition-transform group-hover:scale-110"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 transition-colors">Threads Engagement</h3>
-                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow">Text-driven conversations, authentic brand recommendations, and active community interaction.</p>
-                        <div class="text-white text-xs md:text-sm font-semibold flex items-center gap-2 mt-auto">
+                        <h3 class="text-xl font-bold text-white mb-3 transition-colors">Threads Engagement</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">Text-driven conversations, authentic brand recommendations, and active community interaction.</p>
+                        <div class="text-white text-sm font-semibold flex items-center gap-2 mt-auto">
                             Visit Profile <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                         </div>
                     </a>
 
                     <!-- YouTube Card -->
-                    <a href="https://youtube.com/@rakshaka07" target="_blank" class="group bg-dark p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-yt/50 transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,0,0,0.1)] flex flex-col h-full">
-                        <div class="mb-4 md:mb-6">
-                            <i class="fa-brands fa-youtube text-3xl md:text-4xl text-brand-yt transition-transform group-hover:scale-110"></i>
+                    <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="group bg-dark p-8 rounded-2xl border border-white/10 hover:border-brand-yt/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,0,0,0.15)] flex flex-col h-full">
+                        <div class="mb-6">
+                            <i class="fa-brands fa-youtube text-4xl text-brand-yt transition-transform group-hover:scale-110"></i>
                         </div>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-brand-yt transition-colors">YouTube Shorts</h3>
-                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow">High-retention vertical videos capitalizing on the YouTube algorithm and potential vlog segments.</p>
-                        <div class="text-brand-yt text-xs md:text-sm font-semibold flex items-center gap-2 mt-auto">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-brand-yt transition-colors">YouTube Shorts</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">High-retention vertical videos capitalizing on the YouTube algorithm and potential vlog segments.</p>
+                        <div class="text-brand-yt text-sm font-semibold flex items-center gap-2 mt-auto">
                             Visit Profile <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
                         </div>
                     </a>
@@ -251,69 +227,63 @@
             </div>
         </section>
 
-        <!-- Industries Section -->
         <section id="industries" class="py-16 md:py-24 bg-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10 md:mb-16">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-3 md:mb-4">Industries We Elevate</h2>
-                    <div class="w-12 md:w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Industries We Elevate</h2>
+                    <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
                 </div>
                 
-                <!-- Image Grid: 1 col mobile, 3 cols desktop -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Grid: 1 col mobile, 2/3 col desktop -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     <!-- Hospitals -->
-                    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] rounded-2xl overflow-hidden group cursor-pointer border border-white/5">
-                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hospitals & Clinics" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-dark/70 group-hover:bg-dark/40 transition-colors duration-500"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-6 text-center">
-                            <i class="fa-solid fa-house-medical text-2xl md:text-3xl text-gold/80 mb-2 md:mb-3 group-hover:text-gold transition-colors"></i>
-                            <h3 class="text-xl md:text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors tracking-wide">Hospitals & Clinics</h3>
+                    <div class="relative h-64 md:h-80 rounded-2xl overflow-hidden group border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Hospitals & Clinics" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-500"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                            <i class="fa-solid fa-house-medical text-3xl md:text-4xl text-gold mb-4 group-hover:-translate-y-2 transition-transform"></i>
+                            <h3 class="text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors">Hospitals & Clinics</h3>
                         </div>
                     </div>
 
                     <!-- Cloth Centers -->
-                    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] rounded-2xl overflow-hidden group cursor-pointer border border-white/5">
-                        <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cloth Centers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-dark/70 group-hover:bg-dark/40 transition-colors duration-500"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-6 text-center">
-                            <i class="fa-solid fa-shirt text-2xl md:text-3xl text-gold/80 mb-2 md:mb-3 group-hover:text-gold transition-colors"></i>
-                            <h3 class="text-xl md:text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors tracking-wide">Cloth Centers</h3>
+                    <div class="relative h-64 md:h-80 rounded-2xl overflow-hidden group border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e08?auto=format&fit=crop&w=800&q=80" alt="Cloth Centers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-500"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                            <i class="fa-solid fa-shirt text-3xl md:text-4xl text-gold mb-4 group-hover:-translate-y-2 transition-transform"></i>
+                            <h3 class="text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors">Cloth Centers</h3>
                         </div>
                     </div>
 
                     <!-- Salons & Spas -->
-                    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] rounded-2xl overflow-hidden group cursor-pointer border border-white/5 sm:col-span-2 lg:col-span-1">
-                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salons & Spas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-dark/70 group-hover:bg-dark/40 transition-colors duration-500"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-6 text-center">
-                            <i class="fa-solid fa-scissors text-2xl md:text-3xl text-gold/80 mb-2 md:mb-3 group-hover:text-gold transition-colors"></i>
-                            <h3 class="text-xl md:text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors tracking-wide">Salons & Spas</h3>
+                    <div class="relative h-64 md:h-80 rounded-2xl overflow-hidden group border border-white/10 lg:col-span-1 md:col-span-2 lg:col-auto">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Salons & Spas" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-500"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                            <i class="fa-solid fa-scissors text-3xl md:text-4xl text-gold mb-4 group-hover:-translate-y-2 transition-transform"></i>
+                            <h3 class="text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors">Salons & Spas</h3>
                         </div>
                     </div>
 
                     <!-- Real Estate -->
-                    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] rounded-2xl overflow-hidden group cursor-pointer border border-white/5 sm:col-span-1 lg:col-span-1">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Real Estate" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-dark/70 group-hover:bg-dark/40 transition-colors duration-500"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-6 text-center">
-                            <i class="fa-solid fa-building text-2xl md:text-3xl text-gold/80 mb-2 md:mb-3 group-hover:text-gold transition-colors"></i>
-                            <h3 class="text-xl md:text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors tracking-wide">Real Estate</h3>
+                    <div class="relative h-64 md:h-80 rounded-2xl overflow-hidden group border border-white/10 lg:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Real Estate" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-500"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                            <i class="fa-solid fa-building text-3xl md:text-4xl text-gold mb-4 group-hover:-translate-y-2 transition-transform"></i>
+                            <h3 class="text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors">Real Estate</h3>
                         </div>
                     </div>
 
-                    <!-- Educational Inst. (Fixed URL) -->
-                    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] rounded-2xl overflow-hidden group cursor-pointer border border-white/5 sm:col-span-1 md:col-span-2 lg:col-span-2">
-                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Educational Institutions" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div class="absolute inset-0 bg-dark/70 group-hover:bg-dark/40 transition-colors duration-500"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-6 text-center">
-                            <i class="fa-solid fa-graduation-cap text-2xl md:text-3xl text-gold/80 mb-2 md:mb-3 group-hover:text-gold transition-colors"></i>
-                            <h3 class="text-xl md:text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors tracking-wide">Educational Inst.</h3>
+                    <!-- Educational Inst. -->
+                    <div class="relative h-64 md:h-80 rounded-2xl overflow-hidden group border border-white/10 md:col-span-1 lg:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Educational Institutions" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-500"></div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                            <i class="fa-solid fa-graduation-cap text-3xl md:text-4xl text-gold mb-4 group-hover:-translate-y-2 transition-transform"></i>
+                            <h3 class="text-2xl font-serif font-bold text-white group-hover:text-gold transition-colors">Educational Inst.</h3>
                         </div>
                     </div>
 
@@ -321,34 +291,33 @@
             </div>
         </section>
 
-        <!-- Enquiry / Form Section -->
         <section id="enquiry" class="py-16 md:py-24 bg-dark-light relative border-t border-white/5">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-dark border border-white/10 rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="bg-[#1a1a1a] border border-white/10 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-gold"></div>
                     
-                    <div class="text-center mb-8 md:mb-10">
-                        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-2 md:mb-3">Start Your Campaign</h2>
-                        <p class="text-gray-400 text-xs sm:text-sm">Fill out your details, and we'll connect via WhatsApp instantly.</p>
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-serif font-bold text-white mb-3">Start Your Campaign</h2>
+                        <p class="text-gray-400 text-sm md:text-base">Fill out your details, and we'll connect via WhatsApp instantly.</p>
                     </div>
 
-                    <form id="enquiry-form" class="space-y-4 md:space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <form id="enquiry-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-1.5 md:mb-2">Your Name *</label>
-                                <input type="text" id="name" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-3 py-2.5 md:px-4 md:py-3 text-white text-sm md:text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="John Doe">
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Your Name *</label>
+                                <input type="text" id="name" required class="w-full bg-[#0F0F0F] border border-white/10 rounded-lg px-4 py-3 text-white text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="John Doe">
                             </div>
                             <div>
-                                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-1.5 md:mb-2">Business Name *</label>
-                                <input type="text" id="business" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-3 py-2.5 md:px-4 md:py-3 text-white text-sm md:text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="E.g., Kolar Supermart">
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Business Name *</label>
+                                <input type="text" id="business" required class="w-full bg-[#0F0F0F] border border-white/10 rounded-lg px-4 py-3 text-white text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="E.g., Kolar Supermart">
                             </div>
                             <div>
-                                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-1.5 md:mb-2">Phone Number *</label>
-                                <input type="tel" id="phone" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-3 py-2.5 md:px-4 md:py-3 text-white text-sm md:text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="+91 98765 43210">
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" required class="w-full bg-[#0F0F0F] border border-white/10 rounded-lg px-4 py-3 text-white text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all" placeholder="+91 98765 43210">
                             </div>
                             <div>
-                                <label class="block text-xs sm:text-sm font-medium text-gray-400 mb-1.5 md:mb-2">Platform of Interest *</label>
-                                <select id="platform" required class="w-full bg-dark-lighter border border-white/10 rounded-lg px-3 py-2.5 md:px-4 md:py-3 text-white text-sm md:text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all appearance-none">
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Platform of Interest *</label>
+                                <select id="platform" required class="w-full bg-[#0F0F0F] border border-white/10 rounded-lg px-4 py-3 text-white text-base focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-all appearance-none">
                                     <option value="" disabled selected>Select platform</option>
                                     <option value="Instagram">Instagram</option>
                                     <option value="YouTube">YouTube</option>
@@ -358,50 +327,49 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="w-full bg-gold hover:bg-gold-light text-black font-bold py-3 md:py-4 rounded-xl transition-colors shadow-lg flex justify-center items-center gap-2 mt-2 md:mt-4 text-sm md:text-base">
-                            <i class="fa-brands fa-whatsapp text-lg md:text-xl"></i> Submit via WhatsApp
+                        <button type="submit" class="w-full bg-gold hover:bg-gold-light text-black font-bold py-4 rounded-xl transition-colors shadow-lg flex justify-center items-center gap-2 mt-4 text-base md:text-lg">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Submit via WhatsApp
                         </button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section id="faq" class="py-16 md:py-24 bg-dark">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10 md:mb-12">
-                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-3 md:mb-4">Frequently Asked Questions</h2>
-                    <div class="w-12 md:w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-serif font-bold text-white mb-4">Frequently Asked Questions</h2>
+                    <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
                 </div>
 
-                <div class="space-y-3 md:space-y-4">
+                <div class="space-y-4">
                     <div class="border border-white/10 rounded-xl bg-dark-light">
-                        <button class="w-full text-left px-4 py-4 md:px-6 md:py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
-                            <span class="font-medium text-white text-sm md:text-base">Do I need to provide the video script?</span>
+                        <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                            <span class="font-medium text-white text-base">Do I need to provide the video script?</span>
                             <i class="fa-solid fa-plus text-gold transform transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content px-4 md:px-6 pb-0">
-                            <p class="text-gray-400 pb-4 md:pb-5 text-xs md:text-sm">No, you don't! We handle conceptualization and scripting to ensure the content matches trends and highlights your brand.</p>
+                        <div class="faq-content px-6 pb-0">
+                            <p class="text-gray-400 pb-5 text-sm md:text-base">No, you don't! We handle conceptualization and scripting to ensure the content matches trends and highlights your brand effectively.</p>
                         </div>
                     </div>
                     
                     <div class="border border-white/10 rounded-xl bg-dark-light">
-                        <button class="w-full text-left px-4 py-4 md:px-6 md:py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
-                            <span class="font-medium text-white text-sm md:text-base">How long does it take to post?</span>
+                        <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                            <span class="font-medium text-white text-base">How long does it take to post?</span>
                             <i class="fa-solid fa-plus text-gold transform transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content px-4 md:px-6 pb-0">
-                            <p class="text-gray-400 pb-4 md:pb-5 text-xs md:text-sm">Once the shoot is done, it typically takes 2-4 business days for editing and final posting across platforms.</p>
+                        <div class="faq-content px-6 pb-0">
+                            <p class="text-gray-400 pb-5 text-sm md:text-base">Once the shoot is done, it typically takes 2-4 business days for editing and final posting across platforms.</p>
                         </div>
                     </div>
 
                     <div class="border border-white/10 rounded-xl bg-dark-light">
-                        <button class="w-full text-left px-4 py-4 md:px-6 md:py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
-                            <span class="font-medium text-white text-sm md:text-base">Do you shoot outside of Kolar?</span>
+                        <button class="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                            <span class="font-medium text-white text-base">Do you shoot outside of Kolar?</span>
                             <i class="fa-solid fa-plus text-gold transform transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content px-4 md:px-6 pb-0">
-                            <p class="text-gray-400 pb-4 md:pb-5 text-xs md:text-sm">Yes, we are available across Karnataka. Travel fees may apply depending on the distance from Kolar.</p>
+                        <div class="faq-content px-6 pb-0">
+                            <p class="text-gray-400 pb-5 text-sm md:text-base">Yes, we are available across Karnataka. Travel fees may apply depending on the distance from Kolar.</p>
                         </div>
                     </div>
                 </div>
@@ -409,36 +377,35 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark-light border-t border-white/10 pt-12 md:pt-16 pb-8">
+    <footer class="bg-[#1a1a1a] border-t border-white/10 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-10 md:mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 flex-col md:flex-row">
                 <!-- Brand Info -->
-                <div class="text-center md:text-left">
-                    <span class="font-serif text-xl md:text-2xl font-bold tracking-wider text-white uppercase block mb-3 md:mb-4">RAKSHA<span class="text-gold">PROMOTIONS</span></span>
-                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-6 max-w-xs mx-auto md:mx-0">Elevating local businesses in Kolar through high-impact, authentic social media promotions.</p>
+                <div class="text-center md:text-left flex flex-col items-center md:items-start">
+                    <span class="font-serif text-2xl font-bold tracking-wider text-white uppercase block mb-4">RAKSHA<span class="text-gold">PROMOTIONS</span></span>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs text-center md:text-left">Elevating local businesses in Kolar through high-impact, authentic social media promotions.</p>
                     
                     <!-- Colored Footer Icons -->
-                    <div class="flex justify-center md:justify-start space-x-5">
+                    <div class="flex space-x-5">
                         <a href="https://www.instagram.com/rakshavlogs_kolar/" target="_blank" class="transition transform hover:scale-110" title="Instagram">
-                            <i class="fa-brands fa-instagram text-xl ig-gradient-text"></i>
+                            <i class="fa-brands fa-instagram text-2xl ig-gradient-text"></i>
                         </a>
-                        <a href="https://www.threads.com/@rakshavlogs_kolar" target="_blank" class="transition transform hover:scale-110 text-white" title="Threads">
-                            <i class="fa-brands fa-threads text-xl"></i>
+                        <a href="https://www.threads.com/@rakshavlogs_kolar?xmt=AQG09vztFjQUSoGf5zGLBgwVYrYQqJhGI1I0o_8Z9Xyr2-I" target="_blank" class="transition transform hover:scale-110 text-white" title="Threads">
+                            <i class="fa-brands fa-threads text-2xl"></i>
                         </a>
-                        <a href="https://youtube.com/@rakshaka07" target="_blank" class="transition transform hover:scale-110 text-brand-yt" title="YouTube">
-                            <i class="fa-brands fa-youtube text-xl"></i>
+                        <a href="https://youtube.com/@rakshaka07?si=uI7_DrMOaZTUrlHb" target="_blank" class="transition transform hover:scale-110 text-brand-yt" title="YouTube">
+                            <i class="fa-brands fa-youtube text-2xl"></i>
                         </a>
                         <a href="https://wa.me/918660647295" target="_blank" class="transition transform hover:scale-110 text-brand-wa" title="WhatsApp">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
-                <div class="text-center md:text-left">
-                    <h4 class="text-white font-semibold mb-3 md:mb-4 text-xs md:text-sm tracking-wider uppercase">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400 text-xs md:text-sm">
+                <div class="text-center md:text-left flex flex-col items-center md:items-start">
+                    <h4 class="text-white font-semibold mb-5 text-sm tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
                         <li><a href="#services" class="hover:text-gold transition">Services</a></li>
                         <li><a href="#industries" class="hover:text-gold transition">Industries</a></li>
                         <li><a href="#faq" class="hover:text-gold transition">FAQ</a></li>
@@ -447,29 +414,35 @@
                 </div>
 
                 <!-- Legal -->
-                <div class="text-center md:text-left">
-                    <h4 class="text-white font-semibold mb-3 md:mb-4 text-xs md:text-sm tracking-wider uppercase">Legal & Contact</h4>
-                    <ul class="space-y-2 text-gray-400 text-xs md:text-sm mb-4 md:mb-6">
+                <div class="text-center md:text-left flex flex-col items-center md:items-start">
+                    <h4 class="text-white font-semibold mb-5 text-sm tracking-wider uppercase">Legal & Contact</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm mb-6">
                         <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
                         <li><a href="#" class="hover:text-gold transition">Terms and Conditions</a></li>
                     </ul>
-                    <a href="https://wa.me/918660647295" target="_blank" class="inline-flex items-center justify-center md:justify-start text-gray-400 text-sm md:text-base font-medium hover:text-brand-wa transition">
-                        <i class="fa-brands fa-whatsapp text-brand-wa mr-2 text-lg"></i> +91 8660647295
+                    <a href="https://wa.me/918660647295" target="_blank" class="inline-flex items-center text-gray-300 text-lg font-medium hover:text-brand-wa transition">
+                        <i class="fa-brands fa-whatsapp text-brand-wa mr-2 text-xl"></i> +91 8660647295
                     </a>
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-6 md:pt-8 text-center text-gray-500 text-[10px] md:text-xs">
-                &copy; 2026 Raksha Promotions Kolar. All rights reserved.
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs text-center">
+                    &copy; 2026 Raksha Promotions Kolar. All rights reserved.
+                </p>
+                <p class="text-gray-600 text-xs text-center font-medium">
+                    Demo crafted by <span class="text-gray-400 hover:text-white cursor-default transition-colors">VisionMatrix Tech</span>
+                </p>
             </div>
         </div>
     </footer>
 
     <!-- Interactive Scripts -->
     <script>
-        // Mobile menu toggle
+        // Mobile menu toggle logic
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+        
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
